@@ -9,16 +9,12 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     <!-- Styles -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="{{ asset('css/backend/app.css') }}">
-
-
     <style>
         [x-cloak] {
             display: none !important;
         }
     </style>
-
 </head>
 
 <body class="overflow-x-hidden bg-body dark:bg-dark-bg">
@@ -38,10 +34,8 @@
         </main>
     </div>
     <!-- Scripts -->
-
     <script src="{{ asset('js/backend/hope-ui.js') }}"></script>
     <script src="{{ asset('js/backend/app.js') }}"></script>
-
     <!-- Browser Sync -->
     @if (getenv('APP_ENV') === 'local')
     <script id="__bs_script__">

@@ -26,7 +26,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white">
+                        <tbody>
                             @foreach ($item as $items)
                             <tr class="whitespace-nowrap">
                                 <td class="px-6  text-sm text-gray-500">

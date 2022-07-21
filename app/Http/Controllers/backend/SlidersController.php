@@ -15,13 +15,13 @@ class SlidersController extends Controller
     public function create()
     {
         $homesliders = null;
-        return view('pages.backend.homesliders.create', compact('homesliders'));
+        return view('pages.backend.sliders.create', compact('homesliders'));
     }
     public function show($id)
     {
         $homesliders = Slider::find($id);
 
-        return view('pages.backend.homesliders.view', compact('homesliders'));
+        return view('pages.backend.sliders.view', compact('homesliders'));
     }
 
     public function edit($id)
@@ -29,7 +29,7 @@ class SlidersController extends Controller
 
         $homeslider = Slider::find($id);
 
-        return view('pages.backend.homesliders.edit', compact('homeslider'));
+        return view('pages.backend.sliders.edit', compact('homeslider'));
     }
 
     public function store(Request $request)

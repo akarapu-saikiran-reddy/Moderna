@@ -13,8 +13,8 @@
             <div class="flex flex-col">
                 <div class="w-full">
                     <div class="border border-gray-900 shadow">
-                        <table class="">
-                            <thead class="bg-blue-300 w-full rounded-lg shadow-lg">
+                        <table>
+                            <thead class=" w-full rounded-lg shadow-lg">
                                 <tr>
                                     <th class="px-6 py-2 text-xs text-gray-200 text-center" width="80">
                                         ID
@@ -33,7 +33,7 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-blue-100">
+                            <tbody>
                                 @foreach ($item as $items)
                                 <tr class="whitespace-nowrap">
                                     <td class="px-6  text-sm text-gray-900">

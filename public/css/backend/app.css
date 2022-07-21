@@ -3719,7 +3719,11 @@ table {
 
 table thead {
     height: 70px;
+    background-color: #4760da;
+}
 
+table tbody {
+    background-color: #eee9d0;
 }
 
 table tr {
