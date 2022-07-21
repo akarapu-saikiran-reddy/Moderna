@@ -77,14 +77,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend'
     Route::get('homecards/view/{id}', 'HomecardsController@show')->name('admin.homecards.view');
     Route::get('homecards/delete/{id}', 'HomecardsController@delete')->name('admin.homecards.delete');
     Route::get('homecards/create', 'HomecardsController@create')->name('admin.homecards.create');
-    //homesliders routes
-    Route::get('homesliders', 'HomeslidersController@index')->name('admin.homesliders');
-    Route::post('homesliders/store', 'HomeslidersController@store')->name('admin.homesliders.store');
-    Route::get('homesliders/edit/{id}', 'HomeslidersController@edit')->name('admin.homesliders.edit');
-    Route::post('homesliders/update/{id}', 'HomeslidersController@update')->name('admin.homesliders.update');
-    Route::get('homesliders/view/{id}', 'HomeslidersController@show')->name('admin.homesliders.view');
-    Route::get('homesliders/delete/{id}', 'HomeslidersController@delete')->name('admin.homesliders.delete');
-    Route::get('homesliders/create', 'HomeslidersController@create')->name('admin.homesliders.create');
+    //sliders routes
+    Route::get('sliders', 'slidersController@index')->name('admin.sliders');
+    Route::post('sliders/store', 'slidersController@store')->name('admin.sliders.store');
+    Route::get('sliders/edit/{id}', 'slidersController@edit')->name('admin.sliders.edit');
+    Route::post('sliders/update/{id}', 'slidersController@update')->name('admin.sliders.update');
+    Route::get('sliders/view/{id}', 'slidersController@show')->name('admin.sliders.view');
+    Route::get('sliders/delete/{id}', 'slidersController@delete')->name('admin.sliders.delete');
+    Route::get('sliders/create', 'slidersController@create')->name('admin.sliders.create');
 
     //team routes
     Route::get('team', 'TeamController@index')->name('admin.team');
