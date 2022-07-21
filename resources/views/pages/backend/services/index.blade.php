@@ -22,13 +22,7 @@
                                 <th class="px-6 py-2 text-xs text-gray-500">
                                     Image </th>
                                 <th class="px-6 py-2 text-xs text-gray-500">
-                                    View
-                                </th>
-                                <th class="px-6 py-2 text-xs text-gray-500">
-                                    Edit
-                                </th>
-                                <th class="px-6 py-2 text-xs text-gray-500">
-                                    Delete
+                                    Action
                                 </th>
                             </tr>
                         </thead>
@@ -75,4 +69,4 @@
             </div>
         </div>
     </div>
-    </x-app-layout>
+</x-admin-layout>

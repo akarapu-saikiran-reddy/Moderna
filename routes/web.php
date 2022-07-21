@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\backend\StaticOptionController;
 
 Route::group(['namespace' => 'App\Http\Controllers\frontend'], function () {
     Route::get('', 'FrontendController@homepageindex')->name('homepage');
@@ -24,7 +25,6 @@ Route::get('admin/about/statics', [StaticOptionController::class, 'aboutoptionsi
 Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend', 'middleware' => (['auth'])], function () {
 
     Route::get('dashboard', 'DashboardController@index')->name('admin.dashboard');
-
     // about routes
     Route::get('aboutus', 'AboutController@index')->name('admin.aboutus');
     Route::get('about/edit/{id}', 'AboutController@edit')->name('admin.about.edit');
@@ -43,15 +43,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend'
     Route::get('blog/delete/{id}', 'BlogController@delete')->name('admin.blog.delete');
     Route::get('blog/create', 'BlogController@create')->name('admin.blog.create');
 
-    //blog-posts routes
-    Route::get('blogposts/edit/{id}', 'BlogpostsController@edit')->name('admin.blogposts.edit');
-    Route::get('blogposts', 'BlogpostsController@index')->name('admin.blogposts');
-    Route::post('blogposts/update/{id}', 'BlogpostsController@update')->name('admin.blogposts.update');
-    Route::get('blogposts/view/{id}', 'BlogpostsController@show')->name('admin.blogposts.view');
-    Route::post('blogposts/store', 'BlogpostsController@store')->name('admin.blogposts.store');
-    Route::get('blogposts/delete/{id}', 'BlogpostsController@delete')->name('admin.blogposts.delete');
-    Route::get('blogposts/create', 'BlogpostsController@create')->name('admin.blogposts.create');
-
     //contact routes
     Route::get('contactus', 'ContactusController@index')->name('admin.contactus');
     Route::post('contactus/store', 'ContactusController@store')->name('admin.contactus.store');
@@ -69,22 +60,22 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend'
     Route::get('homepage/delete/{id}', 'HomeController@delete')->name('admin.homepage.delete');
     Route::get('homepage/create', 'HomeController@create')->name('admin.homepage.create');
     Route::get('homepage', 'HomeController@index')->name('admin.homepage');
-    //homecards routes
-    Route::get('homecards', 'HomecardsController@index')->name('admin.homecards');
-    Route::post('homecards/store', 'HomecardsController@store')->name('admin.homecards.store');
-    Route::get('homecards/edit/{id}', 'HomecardsController@edit')->name('admin.homecards.edit');
-    Route::post('homecards/update/{id}', 'HomecardsController@update')->name('admin.homecards.update');
-    Route::get('homecards/view/{id}', 'HomecardsController@show')->name('admin.homecards.view');
-    Route::get('homecards/delete/{id}', 'HomecardsController@delete')->name('admin.homecards.delete');
-    Route::get('homecards/create', 'HomecardsController@create')->name('admin.homecards.create');
+    //features routes
+    Route::get('features', 'FeaturesController@index')->name('admin.features');
+    Route::post('features/store', 'FeaturesController@store')->name('admin.features.store');
+    Route::get('features/edit/{id}', 'FeaturesController@edit')->name('admin.features.edit');
+    Route::post('features/update/{id}', 'FeaturesController@update')->name('admin.features.update');
+    Route::get('features/view/{id}', 'FeaturesController@show')->name('admin.features.view');
+    Route::get('features/delete/{id}', 'FeaturesController@delete')->name('admin.features.delete');
+    Route::get('features/create', 'FeaturesController@create')->name('admin.features.create');
     //sliders routes
-    Route::get('sliders', 'slidersController@index')->name('admin.sliders');
-    Route::post('sliders/store', 'slidersController@store')->name('admin.sliders.store');
-    Route::get('sliders/edit/{id}', 'slidersController@edit')->name('admin.sliders.edit');
-    Route::post('sliders/update/{id}', 'slidersController@update')->name('admin.sliders.update');
-    Route::get('sliders/view/{id}', 'slidersController@show')->name('admin.sliders.view');
-    Route::get('sliders/delete/{id}', 'slidersController@delete')->name('admin.sliders.delete');
-    Route::get('sliders/create', 'slidersController@create')->name('admin.sliders.create');
+    Route::get('sliders', 'SlidersController@index')->name('admin.sliders');
+    Route::post('sliders/store', 'SlidersController@store')->name('admin.sliders.store');
+    Route::get('sliders/edit/{id}', 'SlidersController@edit')->name('admin.sliders.edit');
+    Route::post('sliders/update/{id}', 'SlidersController@update')->name('admin.sliders.update');
+    Route::get('sliders/view/{id}', 'SlidersController@show')->name('admin.sliders.view');
+    Route::get('sliders/delete/{id}', 'SlidersController@delete')->name('admin.sliders.delete');
+    Route::get('sliders/create', 'SlidersController@create')->name('admin.sliders.create');
 
     //team routes
     Route::get('team', 'TeamController@index')->name('admin.team');

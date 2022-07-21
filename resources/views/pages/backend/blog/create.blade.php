@@ -14,12 +14,9 @@
                 <form action="{{ route('admin.blog.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="" />
-                    <x-backend.form.input type="text" placeholder="Link" label="Link" name="link"
-                        value="" />
-                    <x-backend.form.input type="text" placeholder="Descrioption" label="Description"
-                        name="description" value="" />
-                    <x-backend.form.input type="file" placeholder="Upload-Image" label="Image" name="image"
-                        value="" />
+                    <x-backend.form.input type="text" placeholder="Link" label="Link" name="link" value="" />
+                    <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description" value="" />
+                    <x-backend.form.input type="file" placeholder="Upload-Image" label="Image" name="image" value="" />
                     <br>
                     <div>
                         <x-backend.submit-button>
@@ -30,4 +27,4 @@
             </div>
         </x-slot>
     </x-backend.card>
-    </x-app-layout>
+</x-admin-layout>

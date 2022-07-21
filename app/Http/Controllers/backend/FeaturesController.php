@@ -3,65 +3,65 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Homecards;
+use App\Models\Feature;
 use Illuminate\Http\Request;
 
-class HomecardsController extends Controller
+class FeaturesController extends Controller
 {
     public function __construct()
     {
-        view()->share('title', 'Homepage');
+        view()->share('title', 'Features');
     }
     public function create()
     {
-        $homecards = null;
-        return view('pages.backend.homecards.create', compact('homecards'));
+        $features = null;
+        return view('pages.backend.features.create', compact('features'));
     }
     public function show($id)
     {
-        $homecards = Homecards::find($id);
+        $features = Feature::find($id);
 
-        return view('pages.backend.homecards.view', compact('homecards'));
+        return view('pages.backend.features.view', compact('features'));
     }
 
     public function edit($id)
     {
 
-        $homecards = Homecards::find($id);
+        $features = Feature::find($id);
 
-        return view('pages.backend.homecards.edit', compact('homecards'));
+        return view('pages.backend.features.edit', compact('features'));
     }
 
     public function store(Request $request)
     {
-        $image = new Homecards();
+        $image = new Feature();
         $image->title = $request->title;
         $image->description = $request->description;
         $image->logo = $request->logo;
 
         $image->save();
-        return redirect()->route('admin.homecards')->with('image');
+        return redirect()->route('admin.features')->with('image');
     }
     public function index()
     {
-        $item = Homecards::orderBy('id', 'asc')->paginate(10);
+        $item = Feature::orderBy('id', 'asc')->paginate(10);
 
-        return view('pages.backend.homecards.index', compact('item'));
+        return view('pages.backend.features.index', compact('item'));
     }
 
     public function update(Request $request, $id)
     {
-        $image = Homecards::find($id);
+        $image = Feature::find($id);
         $image->title = $request->title;
         $image->description = $request->description;
         $image->logo = $request->logo;
 
         $image->update();
-        return redirect()->route('admin.homecards');
+        return redirect()->route('admin.features');
     }
     public function delete($id)
     {
-        $user = Homecards::find($id);
+        $user = Feature::find($id);
         $user->delete();
         return redirect()->back();
     }

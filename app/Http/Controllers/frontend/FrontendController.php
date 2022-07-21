@@ -8,8 +8,8 @@ use App\Models\Blog;
 use App\Models\BlogPosts;
 use App\Models\Contactus;
 use App\Models\Home;
-use App\Models\Homecards;
-use App\Models\Homesliders;
+use App\Models\Feature;
+use App\Models\Slider;
 use App\Models\Portfolio;
 use App\Models\Services;
 use App\Models\Servicescard;
@@ -111,8 +111,8 @@ class FrontendController extends Controller
         $description = Helpers::get_static_option('description');
         $videio_url = Helpers::get_static_option('videio_url');
         $svg_logo = Helpers::get_static_option('svg_logo');
-        $data = Homesliders::orderBy('id', 'asc')->paginate(10);
-        $data2 = Homecards::orderBy('id', 'asc')->paginate(10);
+        $data = Slider::orderBy('id', 'asc')->paginate(10);
+        $data2 = Feature::orderBy('id', 'asc')->paginate(10);
         $data3 = Home::orderBy('id', 'asc')->paginate(10);
         return view('pages.frontend.home', compact(
             'data',

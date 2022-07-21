@@ -10,10 +10,8 @@
             <form action="{{ route('admin.services.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="" />
-                <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description"
-                    value="" />
-                <x-backend.form.input type="file" placeholder="Upload Image" label="Image" name="image"
-                    value="" />
+                <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description" value="" />
+                <x-backend.form.input type="file" placeholder="Upload Image" label="Image" name="image" value="" />
 
                 <x-backend.submit-button>
                     {{ __('Save') }}
@@ -21,4 +19,4 @@
             </form>
         </x-slot>
     </x-backend.card>
-    </x-app-layout>
+</x-admin-layout>

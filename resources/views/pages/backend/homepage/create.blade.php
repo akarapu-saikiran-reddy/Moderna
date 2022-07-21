@@ -17,4 +17,4 @@
             </form>
         </x-slot>
     </x-backend.card>
-    </x-app-layout>
+</x-admin-layout>

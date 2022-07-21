@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Homesliders;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
-class HomeslidersController extends Controller
+class SlidersController extends Controller
 {
     public function __construct()
     {
-        view()->share('title', 'Homepage');
+        view()->share('title', 'Sliders');
     }
     public function create()
     {
@@ -19,7 +19,7 @@ class HomeslidersController extends Controller
     }
     public function show($id)
     {
-        $homesliders = Homesliders::find($id);
+        $homesliders = Slider::find($id);
 
         return view('pages.backend.homesliders.view', compact('homesliders'));
     }
@@ -27,41 +27,41 @@ class HomeslidersController extends Controller
     public function edit($id)
     {
 
-        $homeslider = Homesliders::find($id);
+        $homeslider = Slider::find($id);
 
         return view('pages.backend.homesliders.edit', compact('homeslider'));
     }
 
     public function store(Request $request)
     {
-        $image = new Homesliders();
+        $image = new Slider();
         $image->title = $request->title;
         $image->description = $request->description;
         $image->link = $request->link;
 
         $image->save();
-        return redirect()->route('admin.homesliders')->with('image');
+        return redirect()->route('admin.sliders')->with('image');
     }
     public function index()
     {
-        $item = Homesliders::orderBy('id', 'asc')->paginate(10);
+        $item = Slider::orderBy('id', 'asc')->paginate(10);
 
-        return view('pages.backend.homesliders.index', compact('item'));
+        return view('pages.backend.sliders.index', compact('item'));
     }
 
     public function update(Request $request, $id)
     {
-        $image = Homesliders::find($id);
+        $image = Slider::find($id);
         $image->title = $request->title;
         $image->description = $request->description;
         $image->link = $request->link;
 
         $image->update();
-        return redirect()->route('admin.homesliders');
+        return redirect()->route('admin.Slider');
     }
     public function delete($id)
     {
-        $user = Homesliders::find($id);
+        $user = Slider::find($id);
         $user->delete();
         return redirect()->back();
     }
