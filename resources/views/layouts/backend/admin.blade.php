@@ -18,8 +18,7 @@
             display: none !important;
         }
     </style>
-    <!-- @stack('styles')
-    @livewireStyles -->
+
 </head>
 
 <body class="overflow-x-hidden bg-body dark:bg-dark-bg">
@@ -39,11 +38,10 @@
         </main>
     </div>
     <!-- Scripts -->
-    @livewireScripts
-    @stack('scripts')
+
     <script src="{{ asset('js/backend/hope-ui.js') }}"></script>
     <script src="{{ asset('js/backend/app.js') }}"></script>
-    @notifyJs
+
     <!-- Browser Sync -->
     @if (getenv('APP_ENV') === 'local')
     <script id="__bs_script__">

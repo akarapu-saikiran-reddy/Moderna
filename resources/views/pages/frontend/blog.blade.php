@@ -49,7 +49,7 @@
 
                         <div class="sidebar">
 
-                            <h3 class="sidebar-title">Categories</h3>
+                            <!-- <h3 class="sidebar-title">Categories</h3>
                             <div class="sidebar-item categories">
                                 <ul>
                                     <li><a href="https://moodle.org/plugins/mod_icontent">General <span>(25)</span></a></li>
@@ -61,37 +61,20 @@
                                     <li><a href="https://moodle.org/plugins/mod_icontent">Educaion <span>(14)</span></a>
                                     </li>
                                 </ul>
-                            </div><!-- End sidebar categories-->
+                            </div> -->
+                            <!-- End sidebar categories-->
 
                             <h3 class="sidebar-title">Recent Posts</h3>
                             <div class="sidebar-item recent-posts">
                                 @foreach ($data2 as $item)
                                 <div class="post-item clearfix">
-                                    <img src="{{ asset('Upload/images/blogposts/'.$item->image) }}" alt="">
+                                    <img src="{{ asset('Upload/images/blog/'.$item->image) }}" alt="">
                                     <h4><a href="blog-single.html">{{ $item->title }}</a></h4>
                                     <time datetime="2020-01-01">{{ $item->description }}</time>
                                 </div>
                                 @endforeach
 
                             </div><!-- End sidebar recent posts-->
-
-                            <h3 class="sidebar-title">Tags</h3>
-                            <div class="sidebar-item tags">
-                                <ul>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">App</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">IT</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Business</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Mac</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Design</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Office</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Creative</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Studio</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Smart</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Tips</a></li>
-                                    <li><a href="https://moodle.org/plugins/mod_icontent">Marketing</a></li>
-                                </ul>
-                            </div><!-- End sidebar tags-->
-
                         </div><!-- End sidebar -->
 
                     </div><!-- End blog sidebar -->
