@@ -41,7 +41,7 @@ class ServicesController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('Upload/images/servicesp', $filename);
+            $file->move('Upload/images/services ', $filename);
             $image->image = $filename;
         }
         $image->save();

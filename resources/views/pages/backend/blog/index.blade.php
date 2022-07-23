@@ -12,8 +12,8 @@
         <div class="container flex justify-center mx-auto w-full ">
             <div class="flex flex-col">
                 <div class="w-full">
-                    <div>
-                        <table class="">
+                    <div class="border border-gray-900 shadow">
+                        <table>
                             <thead class=" w-full rounded-lg shadow-lg">
                                 <tr>
                                     <th class="px-6 py-2 text-xs text-gray-200 text-center" width="80">
@@ -25,7 +25,7 @@
                                         Description
                                     </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="100">
-                                        link </th>
+                                        Logo </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="100">
                                         Image </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="200">
@@ -40,16 +40,16 @@
                                         {{ $items->id }}
                                     </td>
                                     <td class="px-6  text-sm text-gray-900">
-                                        {{ $items->title }}
+                                        {{ $items->role }}
                                     </td>
                                     <td class="px-6 ">
                                         <div class="text-sm text-gray-900 overflow-hidden">
-                                            {{ $items->description }}
+                                            {{ $items->title }}
                                         </div>
                                     </td>
                                     <td class="px-6 ">
                                         <div class="text-sm text-gray-900 overflow-hidden">
-                                            <p>{{ $items->link }}</p>
+                                            <p>{{ $items->description }}</p>
                                         </div>
                                     </td>
                                     <td class="px-6  text-sm text-gray-900">
@@ -74,7 +74,6 @@
                                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABmJLR0QA/wD/AP+gvaeTAAAB/0lEQVRYhe2XyUoDQRCGPzXowX2Ly0EQQc+aJ9AH8CaefAAVRMXoI/gE3lwuPoCCoBdxOSt6ExQRBIkbiqA5BEM8TA1pxp7NbuPB/NB0papS9Vd3Tc80lPHPMA4cA+8yjoCxvyBSCawBBZ+xKj4lw6ySfAtnVcaAbUU/UyoyVcCDJF3X2DfEluEHq5TQ6CaAbpGrgZzH3gokRf4Aljz2d5k7gWXgJSD/HbAZRHAQ/774rTGoEvCu0AXONvQAfUAv8AqcBlURAymgGbgBroFbyRkJ8zgVnFkiA3AuMef8HIKaLiNzl0VCbqyMn0MQoXuZ29E3f1wkgDZP7FiEMopPUmMfANJAvaJrEF2/xj+p5PMlFIRGik/CkMa+I7YFRZcW3Y7GP6XEa/RLGrRCb0BWZF0f1cpcp9HV8h1ujKzEjk0Iiktro7FDGxr+hlBg/4QRcqvpNKZjaYVsnkVuUeUt84P1LaswIFMBdNgkVAM0GRBqkRjGhNT9Nukj9b9GPfQE5EMIFXxkFe525YFnE0J54FFkb2Pv4bwCDhTdoeh2Pb5uMY8UC/wxTvn+Eo2LRYlxEuYY5VZg4yyKdAZBNEKXMus+QaIiJfNVmGOUs2UE2Bd5Bedb5zMikQQwCkzK72GcPjPGOubXnVUbRFxUAtM425ePQSKHc2uZosR3/TJKhi9wxajqqZlPHgAAAABJRU5ErkJggg==">
                                                 </a>
                                             </div>
-                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

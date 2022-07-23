@@ -1,15 +1,21 @@
 <x-admin-layout>
     <x-backend.card class="">
         <x-slot name="title" class="pl-5">
-            <a href="{{ route('admin.aboutus') }}">
-                <x-backend.submit-button>
-                    {{ __('Back') }}
-                </x-backend.submit-button>
-            </a>
-            <x-backend.form.input type="text" placeholder="{{ $about->title }}" label="Title" name="title" value="" />
-            <x-backend.form.input type="text" placeholder="{{ $about->description }}" label="Description" name="description" value="" />
-            <img src="{{ asset('Upload/images/about/' . $about->image) }}" height="250px" width="250px" alt="">
-            </form>
+            about
         </x-slot>
+        <x-slot name="addbutton">
+            <a href="{{ route('admin.about') }}">
+                <x-backend.hit-button>
+                    {{ __('Back ') }}
+                </x-backend.hit-button>
+            </a>
+        </x-slot>
+        <x-backend.form.input type="text" placeholder="{{ $about->title }}" label="Title" name="title" value="" />
+        <x-backend.form.input type="text" placeholder="{{ $about->role }}" label="Role" name="role" value="" />
+        <x-backend.form.input type="text" placeholder="{{ $about->description }}" label="Description" name="description" value="" />
+
+        <div class="pl-8"> {{__('Image')}}
+            <img src="{{ asset('Upload/images/about/' . $about->image) }}" height="350px" width="350px" alt="">
+        </div>
     </x-backend.card>
 </x-admin-layout>

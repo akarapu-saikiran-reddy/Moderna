@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\backend\StaticOptionController;
+use App\Http\Controllers\backend\StaticOptionController;
 
 Route::group(['namespace' => 'App\Http\Controllers\frontend'], function () {
     Route::get('', 'FrontendController@homepageindex')->name('homepage');

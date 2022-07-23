@@ -32,7 +32,7 @@ class FrontendController extends Controller
     public function blogindex()
     {
         $data = Blog::orderBy('id', 'asc')->paginate(10);
-        $data2 = Blog::latest()->take(5)->get();
+        $data2 = Blog::latest()->take(5)->get(      );
 
         return view('pages.frontend.blog', compact('data', 'data2',));
     }
