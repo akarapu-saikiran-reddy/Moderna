@@ -10,21 +10,7 @@
         <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <x-backend.form.input type="file" placeholder="" label="App" name="app" value="" />
-
-            <x-backend.submit-button>
-                {{ __('Save') }}
-            </x-backend.submit-button>
-        </form>
-        <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
-            @csrf
             <x-backend.form.input type="file" placeholder="" label="Card" name="card" value="" />
-
-            <x-backend.submit-button>
-                {{ __('Save') }}
-            </x-backend.submit-button>
-        </form>
-        <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
-            @csrf
             <x-backend.form.input type="file" placeholder="" label="Web" name="web" value="" />
 
             <x-backend.submit-button>

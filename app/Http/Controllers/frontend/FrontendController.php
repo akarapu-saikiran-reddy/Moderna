@@ -12,7 +12,6 @@ use App\Models\Feature;
 use App\Models\Slider;
 use App\Models\Portfolio;
 use App\Models\Services;
-use App\Models\Servicescard;
 use App\Models\Team;
 use App\Services\Helpers;
 
@@ -32,7 +31,7 @@ class FrontendController extends Controller
     public function blogindex()
     {
         $data = Blog::orderBy('id', 'asc')->paginate(10);
-        $data2 = Blog::latest()->take(5)->get(      );
+        $data2 = Blog::latest()->take(5)->get();
 
         return view('pages.frontend.blog', compact('data', 'data2',));
     }
@@ -65,7 +64,7 @@ class FrontendController extends Controller
         $services_description = Helpers::get_static_option('services_description');
         $pricing_title = Helpers::get_static_option('pricing_title');
         $pricing_description = Helpers::get_static_option('pricing_description');
-        $data = Servicescard::orderBy('id', 'asc')->paginate(10);
+        $data = Feature::orderBy('id', 'asc')->paginate(10);
         $data2 = Services::orderBy('id', 'asc')->paginate(10);
 
         return view('pages.frontend.services', compact(

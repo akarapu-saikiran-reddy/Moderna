@@ -4,14 +4,13 @@
             about
         </x-slot>
         <x-slot name="addbutton">
-            <a href="{{ route('admin.about') }}">
+            <a href="{{ route('admin.aboutus') }}">
                 <x-backend.hit-button>
                     {{ __('Back ') }}
                 </x-backend.hit-button>
             </a>
         </x-slot>
         <x-backend.form.input type="text" placeholder="{{ $about->title }}" label="Title" name="title" value="" />
-        <x-backend.form.input type="text" placeholder="{{ $about->role }}" label="Role" name="role" value="" />
         <x-backend.form.input type="text" placeholder="{{ $about->description }}" label="Description" name="description" value="" />
 
         <div class="pl-8"> {{__('Image')}}

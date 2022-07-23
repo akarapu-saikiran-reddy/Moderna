@@ -23,7 +23,6 @@ class AboutController extends Controller
         $about = About::find($id);
         return view('pages.backend.about.view', compact('about'));
     }
-
     public function edit($id)
     {
 

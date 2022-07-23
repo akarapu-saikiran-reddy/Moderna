@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
+use App\Models\Contact;
 
 class DashboardController extends Controller
 {
@@ -12,6 +14,8 @@ class DashboardController extends Controller
     }
     public function index()
     {
-        return view('pages.backend.dashboard');
+        $contact = Contact::count('id');
+        $blog = Blog::count('id');
+        return view('pages.backend.dashboard', compact('contact', 'blog'));
     }
 }

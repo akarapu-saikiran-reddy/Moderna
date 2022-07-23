@@ -1,14 +1,11 @@
 <x-layout>
-
     <main id="main">
-
         <!-- ======= Our Portfolio Section ======= -->
         <x-sect>
             {{ __('Portfolio') }}
         </x-sect><!-- End Our Portfolio Section -->
         <section class="portfolio">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-12">
                         <ul id="portfolio-flters">
@@ -19,13 +16,11 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
                     @foreach ($data as $item)
                     <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
                         <div class="portfolio-item">
                             <img src="{{ asset('Upload/images/portfolio/app/' . $item->app) }}" width="420px" height="200px" alt="">
-
                             <div class="portfolio-info">
                                 <h3>App</h3>
                                 <div>
@@ -47,7 +42,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
                         <div class="portfolio-item">
                             <img src="{{ asset('Upload/images/portfolio/web/' . $item->web) }}" width="420px" height="200px" alt="">
@@ -61,11 +55,8 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div>
-
             </div>
         </section><!-- End Portfolio Section -->
-
     </main><!-- End #main -->
 </x-layout>

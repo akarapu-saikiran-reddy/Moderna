@@ -25,8 +25,6 @@
                                         Description
                                     </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="100">
-                                        Logo </th>
-                                    <th class="px-6 py-2 text-xs text-gray-200" width="100">
                                         Image </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="200">
                                         Action
@@ -38,9 +36,6 @@
                                 <tr class="whitespace-nowrap">
                                     <td class="px-6  text-sm text-gray-900">
                                         {{ $items->id }}
-                                    </td>
-                                    <td class="px-6  text-sm text-gray-900">
-                                        {{ $items->role }}
                                     </td>
                                     <td class="px-6 ">
                                         <div class="text-sm text-gray-900 overflow-hidden">

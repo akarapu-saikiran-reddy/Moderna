@@ -105,14 +105,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend'
 
     //services-cards routes
 
-    Route::get('services-cards', 'ServicescardController@index')->name('admin.service-cards');
-    Route::post('services-cards/store', 'ServicescardController@store')->name('admin.service-cards.store');
-    Route::get('services-cards/edit/{id}', 'ServicescardController@edit')->name('admin.service-cards.edit');
-    Route::post('services-cards/update/{id}', 'ServicescardController@update')->name('admin.service-cards.update');
-    Route::get('services-cards/view/{id}', 'ServicescardController@show')->name('admin.service-cards.view');
-    Route::get('services-cards/delete/{id}', 'ServicescardController@delete')->name('admin.service-cards.delete');
-    Route::get('services-cards/create', 'ServicescardController@create')->name('admin.service-cards.create');
-    //home routes
+
 
 });
 require __DIR__ . '/auth.php';
