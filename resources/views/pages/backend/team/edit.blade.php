@@ -10,7 +10,6 @@
                 </x-backend.hit-button>
             </a>
         </x-slot>
-
         <form action="{{ route('admin.team.update', $team->id) }}" method="post" enctype="multipart/form-data">
             @csrf
             <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="{{ $team->title }}" />

@@ -28,12 +28,19 @@ class FrontendController extends Controller
         $data = Team::orderBy('id', 'asc')->paginate(10);
         return view('pages.frontend.team', compact('data',));
     }
+
     public function blogindex()
     {
         $data = Blog::orderBy('id', 'asc')->paginate(10);
         $data2 = Blog::latest()->take(5)->get();
 
         return view('pages.frontend.blog', compact('data', 'data2',));
+    }
+    public function blogsingle()
+    {
+        $data = Blog::orderBy('id', 'asc');
+
+        return view('pages.frontend.blogsingle', compact('data'));
     }
     public function contactusindex()
     {
@@ -58,20 +65,23 @@ class FrontendController extends Controller
     }
     public function servicesindex()
     {
-        $services_video_link = Helpers::get_static_option('services_video_link');
-        $services_title = Helpers::get_static_option('services_title');
-        $services_logo = Helpers::get_static_option('services_logo');
-        $services_description = Helpers::get_static_option('services_description');
+        $svg_logo = Helpers::get_static_option('svg_logo');
+        $image = Helpers::get_static_option('image');
+        $video_link = Helpers::get_static_option('video_link');
+        $title = Helpers::get_static_option('title');
+        $logo = Helpers::get_static_option('logo');
+        $description = Helpers::get_static_option('description');
         $pricing_title = Helpers::get_static_option('pricing_title');
         $pricing_description = Helpers::get_static_option('pricing_description');
         $data = Feature::orderBy('id', 'asc')->paginate(10);
         $data2 = Services::orderBy('id', 'asc')->paginate(10);
-
         return view('pages.frontend.services', compact(
-            'services_video_link',
-            'services_title',
-            'services_logo',
-            'services_description',
+            'image',
+            'svg_logo',
+            'video_link',
+            'title',
+            'logo',
+            'description',
             'pricing_title',
             'pricing_description',
             'data',
@@ -101,8 +111,10 @@ class FrontendController extends Controller
             'testimonial_description',
         ));
     }
+
     public function homepageindex()
     {
+        $video_link = Helpers::get_static_option('video_link');
         $image = Helpers::get_static_option('image');
         $title = Helpers::get_static_option('title');
         $card_title = Helpers::get_static_option('card_title');
@@ -110,13 +122,15 @@ class FrontendController extends Controller
         $description = Helpers::get_static_option('description');
         $videio_url = Helpers::get_static_option('videio_url');
         $svg_logo = Helpers::get_static_option('svg_logo');
-        $data = Slider::orderBy('id', 'asc')->paginate(10);
-        $data2 = Feature::orderBy('id', 'asc')->paginate(10);
-        $data3 = Home::orderBy('id', 'asc')->paginate(10);
+        $slider = Slider::orderBy('id', 'asc')->paginate(10);
+        $feature = Feature::orderBy('id', 'asc')->paginate(10);
+        $home = Home::orderBy('id', 'asc')->paginate(10);
+
         return view('pages.frontend.home', compact(
-            'data',
-            'data2',
-            'data3',
+            'video_link',
+            'slider',
+            'feature',
+            'home',
             'card_title',
             'card_description',
             'title',

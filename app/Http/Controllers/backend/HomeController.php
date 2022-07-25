@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Feature;
 use App\Models\Home;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -51,9 +53,10 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $item = Home::orderBy('id', 'asc')->paginate(10);
-
-        return view('pages.backend.homepage.index', compact('item'));
+        $home = Home::orderBy('id', 'asc')->paginate(10);
+        $feature = Feature::orderBy('id', 'asc')->paginate(10);
+        $slider = Slider::orderBy('id', 'asc')->paginate(10);
+        return view('pages.backend.homepage.index', compact('home,feature,slider'));
     }
 
     public function update(Request $request, $id)

@@ -16,14 +16,14 @@
                                 <img src="{{ asset('Upload/images/blog/'.$item->image) }}" width="850px" height="400px" alt="">
                             </div>
                             <h2 class="entry-title">
-                                <a href="blog-single.html">
+                                <a href="{{route('blogsingle')}}">
                                     {{ $item->title }}
                                 </a>
                             </h2>
-                            <div height="100px" class="overflow-hidden">{{$item->description}}</div>
+
                             <div class="entry-content">
                                 <div class="read-more">
-                                    <a href="">Read More</a>
+                                    <a href="{{route('blogsingle')}}">Read More</a>
                                 </div>
                             </div>
                         </article><!-- End blog entry -->

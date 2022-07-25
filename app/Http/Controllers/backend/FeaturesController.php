@@ -37,8 +37,13 @@ class FeaturesController extends Controller
         $image = new Feature();
         $image->title = $request->title;
         $image->description = $request->description;
-        $image->logo = $request->logo;
-
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('Upload/images/feature', $filename);
+            $image->image = $filename;
+        }
         $image->save();
         return redirect()->route('admin.features')->with('image');
     }
@@ -48,14 +53,18 @@ class FeaturesController extends Controller
 
         return view('pages.backend.features.index', compact('item'));
     }
-
     public function update(Request $request, $id)
     {
         $image = Feature::find($id);
         $image->title = $request->title;
         $image->description = $request->description;
-        $image->logo = $request->logo;
-
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('Upload/images/homepage', $filename);
+            $image->image = $filename;
+        }
         $image->update();
         return redirect()->route('admin.features');
     }

@@ -87,87 +87,52 @@ class StaticOptionController extends Controller
             $key = 'contacte_description';
             $value = $request->contacte_description;
             Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('contacte_logo')) {
-            $key = 'contacte_logo';
-            $value = $request->contacte_logo;
-            Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('contactp_logo')) {
-            $key = 'contactp_logo';
-            $value = $request->contactp_logo;
-            Helpers::set_static_option($key, $value);
-        };
-
+        }
         if ($request->has('contactp_description')) {
             $key = 'contactp_description';
             $value = $request->contactp_description;
             Helpers::set_static_option($key, $value);
-        };
+        }
 
         if ($request->has('contacta_description')) {
             $key = 'contacta_description';
             $value = $request->contacta_description;
             Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('contacta_logo')) {
-            $key = 'contacta_logo';
-            $value = $request->contacta_logo;
-            Helpers::set_static_option($key, $value);
         }
         if ($request->has('gmap_link')) {
-            $key = 'gmap_link';
+            ~$key = 'gmap_link';
             $value = $request->gmap_link;
             Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('services_title')) {
-            $key = 'services_title';
-            $value = $request->services_title;
-            Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('services_description')) {
-            $key = 'services_description';
-            $value = $request->services_description;
-            Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('services_video_link')) {
-            $key = 'services_video_link';
-            $value = $request->services_video_link;
-            Helpers::set_static_option($key, $value);
-        };
-        if ($request->has('services_svg_logo')) {
-            $key = 'services_svg_logo';
-            $value = $request->services_svg_logo;
-            Helpers::set_static_option($key, $value);
-        };
+        }
+
         if ($request->has('pricing_title')) {
             $key = 'pricing_title';
             $value = $request->pricing_title;
             Helpers::set_static_option($key, $value);
-        };
+        }
 
         if ($request->has('pricing_description')) {
             $key = 'pricing_description';
             $value = $request->pricing_description;
             Helpers::set_static_option($key, $value);
-        };
+        }
 
         return redirect()->back();
     }
     public function homeoptionsindex()
     {
-        return view('pages.backend.homepagestatics');
+        return view('pages.backend.homepage');
     }
     public function aboutoptionsindex()
     {
-        return view('pages.backend.aboutstatics');
+        return view('pages.backend.aboutus');
     }
     public function contactoptionsindex()
     {
-        return view('pages.backend.contactstatics');
+        return view('pages.backend.contact');
     }
     public function servicesoptionsindex()
     {
-        return view('pages.backend.servicesstatics');
+        return view('pages.backend.services');
     }
 }

@@ -13,21 +13,22 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="info-box">
-                                    {{ print_r($contacta_logo) }}
+                                    <i class="bx bx-map"></i>
                                     <h3>Contact Address</h3>
                                     <p>{{ $contacta_description }}</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="info-box">
-                                    {{ print_r($contacte_logo)}}
+                                    <i class="bx bx-envelope"></i>
                                     <h3>Contact Email</h3>
                                     <p> {{$contacte_description}}</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="info-box">
-                                    {{ print_r($contactp_logo) }}
+
+                                    <i class="bx bx-phone-call"></i>
                                     <h3>Contact Number</h3>
                                     <p>{{ $contactp_description }}</p>
                                 </div>

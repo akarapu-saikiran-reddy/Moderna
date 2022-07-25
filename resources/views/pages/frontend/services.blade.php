@@ -16,7 +16,7 @@
                             <p class="description">{{ $item->description }}</p>
                         </div>
                     </div>
-                    @endforeach 
+                    @endforeach
                 </div>
             </div>
         </section><!-- End Services Section -->
@@ -25,16 +25,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 video-box">
-                        <img src="{{ asset('frontend/assets/img/why-us.jpg') }}" class="img-fluid" alt="">
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                        <img src="{{asset('Upload/images/homepage/image/'.$image)}}" class="img-fluid w-100" alt="">
+                        <a href="{!! $video_link !!}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
                     </div>
                     <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bx-fingerprint"></i>
-                                {!! $services_logo !!}
+                            <div class="icon">
+                                {!!$svg_logo!!}
                             </div>
-                            <h4 class="title"><a href="">{{ $services_title }}</a></h4>
-                            <p class="description">{{ $services_description }}</p>
+                            <h4 class="title"><a href="">{{$title}}</a></h4>
+                            <p class="description">{{$description}}</p>
                         </div>
                     </div>
                 </div>
@@ -43,12 +43,13 @@
         <!-- ======= Service Details Section ======= -->
         <section class="service-details">
             <div class="container">
+                <h1>Goals</h1>
                 <div class="row">
                     @foreach ($data2 as $item)
-                    <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="col-md-6 d-flex  align-items-stretch" data-aos="fade-up">
                         <div class="card">
                             <div class="card-img">
-                                <img src="{{ asset('Upload/images/servicesp/'.$item->image) }}">
+                                <img src="{{ asset('Upload/images/services/'.$item->image) }}" width="600px">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><a href="https://lipsum.com/">{{ $item->title }}</a></h5>

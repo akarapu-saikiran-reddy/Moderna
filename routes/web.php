@@ -13,6 +13,7 @@ Route::group(['namespace' => 'App\Http\Controllers\frontend'], function () {
     Route::get('services', 'FrontendController@servicesindex')->name('services');
     Route::get('portfolio', 'FrontendController@portfolioindex')->name('portfolio');
     Route::get('about', 'FrontendController@aboutindex')->name('about');
+    Route::get('blogsingle', 'FrontendController@blogsingle')->name('blogsingle');
 });
 //static_options_routes
 

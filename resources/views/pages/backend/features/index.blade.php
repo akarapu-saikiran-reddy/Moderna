@@ -25,7 +25,7 @@
                                         Description
                                     </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="100">
-                                        Logo </th>
+                                        image </th>
                                     <th class="px-6 py-2 text-xs text-gray-200" width="200">
                                         Action
                                     </th>
@@ -47,7 +47,9 @@
                                     </td>
                                     <td class="px-6 ">
                                         <div class="text-sm text-gray-900 overflow-hidden">
-                                            <p>{!! $items->logo !!}</p>
+                                            <div class="rounded-full overflow-hidden">
+                                                <img src="{{ asset('Upload/images/feature/'.$items->image) }}" width="70px" height="100px" alt="">
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="px-6 ">

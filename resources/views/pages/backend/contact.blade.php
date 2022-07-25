@@ -4,7 +4,6 @@
             {{ __('Email') }}
             <form action="{{ route('admin.static-options') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <x-backend.form.input type="text" placeholder="Upload logo" label="logo" name="contacte_logo" value="" />
                 <x-backend.form.input type="text" placeholder="Upload Description" label="Description" name="contacte_description" value="" />
                 <x-backend.submit-button>
                     {{ __('Save') }}
@@ -13,7 +12,6 @@
             {{ __('Mobile') }}
             <form action="{{ route('admin.static-options') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <x-backend.form.input type="text" placeholder="Upload logo" label="logo" name="contactp_logo" value="" />
                 <x-backend.form.input type="text" placeholder="Upload Description" label="Description" name="contactp_description" value="" />
                 <x-backend.submit-button>
                     {{ __('Save') }}
@@ -22,7 +20,6 @@
             {{ __('Address') }}
             <form action="{{ route('admin.static-options') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <x-backend.form.input type="text" placeholder="Upload logo" label="logo" name="contacta_logo" value="" />
                 <x-backend.form.input type="text" placeholder="Upload Description" label="Description" name="contacta_description" value="" />
                 <x-backend.submit-button>
                     {{ __('Save') }}
