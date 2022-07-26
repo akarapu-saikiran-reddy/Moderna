@@ -10,7 +10,8 @@
         <form action="{{ route('admin.homepage.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="" />
-            <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description" value="" />
+            <h1>Description</h1>
+            <textarea name="description" id="" cols="93" rows="1" class="border-blue-400 border-solid border-2 ml-6"></textarea>
             <x-backend.form.input type="file" placeholder="Upload Image" label="Image" name="image" value="" />
             <x-backend.submit-button>
                 {{ __('Save') }}

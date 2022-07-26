@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($item as $items)
+                                @foreach ($home as $items)
                                 <tr class="whitespace-nowrap">
                                     <td class="px-6  text-sm text-gray-900">
                                         {{ $items->id }}

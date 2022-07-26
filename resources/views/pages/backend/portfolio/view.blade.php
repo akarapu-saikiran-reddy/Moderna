@@ -4,7 +4,7 @@
             Teams
         </x-slot>
         <x-slot name="addbutton" class="pl-5">
-            <a href="{{ route('admin.team') }}">
+            <a href="{{ route('admin.portfolio') }}">
                 <x-backend.hit-button>
                     {{ __('Back') }}
                 </x-backend.hit-button>

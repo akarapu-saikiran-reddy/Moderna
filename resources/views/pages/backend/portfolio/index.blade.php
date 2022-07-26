@@ -3,7 +3,7 @@
         <x-slot name="title">
         </x-slot>
         <x-slot name="addbutton">
-            <a href="{{ route('admin.team.create') }}">
+            <a href="{{ route('admin.portfolio.create') }}">
                 <x-backend.hit-button>
                     {{ __('Add ') }}
                 </x-backend.hit-button>
@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <a href="{{ route('admin.team.edit', $items->id) }}" class="px-4 py-1 text-sm text-white  rounded">
-                                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAtklEQVRIie3VMQ6CMBTG8X+c3FyNV2B14BC6yElI3GH0MOjsPZw9goQb1IE0NE1aGPpKSN6XvKWQ/niPpAXNxlMDPfABzrnQFjBODUDpv7TL8CEH4E2mzv2uDePYRaB2Bv9JoHbzGF5LoTHcX0uO2nqkhJaiYvgS1ACNoooqalMArxk06Ynk5hJBk3fq5rgGanMCrkxjFxnvHrgHnhVSKECF8O0SSsf0H0Odi+QLPIEb49g1288fFcGTp8Rx7bMAAAAASUVORK5CYII=">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAtklEQVRIie3VMQ6CMBTG8X+c3FyNV2B14BC6yElI3GH0MOjsPZw9goQb1IE0NE1aGPpKSN6XvKWQ/niPpAXNxlMDPfABzrnQFjBODUDpv7TL8CEH4E2mzv2uDePYRaB2Bv9JoHbzGF5LoTHcX0uO2nqkhJaiYvgS1ACNoooqalMArxk06Ynk5hJBk3fq5rgGanMCrkxjFxnvHrgHnhVSKECF8O0SSsf0H0Odi+QLPIEb49g1288fFcGTp8Rx7bMAAAAASUVORK5CYII=">
                                                 </a>
                                             </div>
                                             <div class="col-4">

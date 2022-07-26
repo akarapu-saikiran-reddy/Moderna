@@ -30,7 +30,6 @@ class HomeController extends Controller
 
     public function edit($id)
     {
-
         $home = Home::find($id);
 
         return view('pages.backend.homepage.edit', compact('home'));
@@ -56,7 +55,7 @@ class HomeController extends Controller
         $home = Home::orderBy('id', 'asc')->paginate(10);
         $feature = Feature::orderBy('id', 'asc')->paginate(10);
         $slider = Slider::orderBy('id', 'asc')->paginate(10);
-        return view('pages.backend.homepage.index', compact('home,feature,slider'));
+        return view('pages.backend.homepage.index', compact('home', 'feature', 'slider'));
     }
 
     public function update(Request $request, $id)

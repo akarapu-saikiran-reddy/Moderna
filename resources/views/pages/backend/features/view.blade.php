@@ -10,10 +10,10 @@
                 </x-backend.hit-button>
             </a>
         </x-slot>
-        <x-backend.form.input type="text" placeholder="{{ $features->title }}" label="Title" name="title" value="" />
+        <x-backend.form.inputdisabled type="text" placeholder="{{ $features->title }}" label="Title" name="title" value="" />
         <div class="pl-8"> {{__('Image')}}
             <img src="{{ asset('Upload/images/feature/' . $features->image) }}" height="350px" width="350px" alt="">
         </div>
-        <x-backend.form.input type="text" placeholder="{{ $features->description }}" label="Description" name="description" value="" />
+        <x-backend.form.inputdisabled type="text" placeholder="{{ $features->description }}" label="Description" name="description" value="" />
     </x-backend.card>
 </x-admin-layout>

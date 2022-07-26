@@ -10,9 +10,9 @@
                 </x-backend.hit-button>
             </a>
         </x-slot>
-        <x-backend.form.input type="text" placeholder="{{ $homesliders->title }}" label="Title" name="title" value="" />
-        <x-backend.form.input type="text" placeholder="{{ $homesliders->description }}" label="Description" name="description" value="" />
-        <x-backend.form.input type="text" placeholder="{{ $homesliders->link }}" label="Description" name="description" value="" />
+        <x-backend.form.inputdisabled type="text" placeholder="{{ $homesliders->title }}" label="Title" name="title" value="" />
+        <x-backend.form.inputdisabled type="text" placeholder="{{ $homesliders->description }}" label="Description" name="description" value="" />
+        <x-backend.form.inputdisabled type="text" placeholder="{{ $homesliders->link }}" label="Description" name="description" value="" />
         </form>
     </x-backend.card>
 </x-admin-layout>

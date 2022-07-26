@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\StaticOptionController;
 
@@ -26,7 +27,9 @@ Route::get('admin/about/statics', [StaticOptionController::class, 'aboutoptionsi
 Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend', 'middleware' => (['auth'])], function () {
 
     Route::get('dashboard', 'DashboardController@index')->name('admin.dashboard');
+
     // about routes
+
     Route::get('aboutus', 'AboutController@index')->name('admin.aboutus');
     Route::get('about/edit/{id}', 'AboutController@edit')->name('admin.about.edit');
     Route::post('about/update/{id}', 'AboutController@update')->name('admin.about.update');
@@ -103,10 +106,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\backend'
     Route::get('services/view/{id}', 'ServicesController@show')->name('admin.services.view');
     Route::get('services/delete/{id}', 'ServicesController@delete')->name('admin.services.delete');
     Route::get('services/create', 'ServicesController@create')->name('admin.services.create');
-
     //services-cards routes
-
-
-
 });
+
 require __DIR__ . '/auth.php';

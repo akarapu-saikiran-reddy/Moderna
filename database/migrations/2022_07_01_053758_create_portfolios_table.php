@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->string('app');
-            $table->string('card');
-            $table->string('web');
+            $table->string('app')->nullable();
+            $table->string('card')->nullable();
+            $table->string('web')->nullable();
             $table->timestamps();
         });
     }
