@@ -48,7 +48,7 @@
                                     <td class="px-6 ">
                                         <div class="text-sm text-gray-900 overflow-hidden">
                                             <div class="rounded-full overflow-hidden">
-                                                <img src="{{ asset('Upload/images/feature/'.$items->image) }}" width="70px" height="100px" alt="">
+                                                {!!$items->image!!}
                                             </div>
                                         </div>
                                     </td>

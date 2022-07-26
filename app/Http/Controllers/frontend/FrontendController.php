@@ -5,7 +5,6 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Blog;
-use App\Models\BlogPosts;
 use App\Models\Contactus;
 use App\Models\Home;
 use App\Models\Feature;

@@ -14,7 +14,7 @@
             @csrf
             <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="{{ $features->title }}" />
             <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description" value="{{ $features->description }}" />
-            <x-backend.form.input type="file" placeholder="Image" label="Image" name="image" value="{{ $features->image}}" />
+            <x-backend.form.input type="text" placeholder="Image" label="Image" name="image" value="{{ $features->image}}" />
             <x-backend.submit-button>
                 {{ __('Update') }}
             </x-backend.submit-button>

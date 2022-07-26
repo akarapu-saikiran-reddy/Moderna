@@ -10,7 +10,7 @@
         <form action="{{ route('admin.features.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <x-backend.form.input type="text" placeholder="Title" label="Title" name="title" value="" />
-            <x-backend.form.input type="file" placeholder="image" label="image" name="image" value="" />
+            <x-backend.form.input type="text" placeholder="Logo" label="Logo" name="image" value="" />
             <x-backend.form.input type="text" placeholder="Descrioption" label="Description" name="description" value="" />
             <x-backend.submit-button>
                 {{ __('Save') }}

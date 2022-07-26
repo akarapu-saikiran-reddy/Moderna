@@ -11,7 +11,7 @@
                     @foreach ($data as $item)
                     <div class="col-md-6 col-lg-3  d-flex align-items-stretch" min-width=" full" data-aos="fade-up">
                         <div class="icon-box icon-box-pink w-100">
-                            <div class="icon">{!! $item->logo !!}</div>
+                            <div class="icon">{!! $item->image !!}</div>
                             <h4 class="title"><a href="">{{ $item->title }}</a></h4>
                             <p class="description">{{ $item->description }}</p>
                         </div>
